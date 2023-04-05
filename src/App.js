@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import ChildComponent from './Component/ChildComponent';
+import HOC from './Component/HOC';
+import PureComponents from './Component/PureComponents';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <PureComponents/>
+     <ChildComponent data={<HOC/>}/>
     </div>
   );
 }
